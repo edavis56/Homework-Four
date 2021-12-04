@@ -14,36 +14,36 @@ The bleow code sets up the start button with an EventListner containing a functi
 
 The next set of code sets up the timer using a function. 
 
-![](/images/TimerSetup.JPG)
+![](/images/TimerSetup.jpg)
 
 The final piece of code for criteria one is belwo. This is for the questions. Through a function the questions are displayed using a for loop. 
 
-![](/images/QuestionSetup.JPG)
+![](/images/QuestionSetup.jpg)
 
 To facilitate the for loop an additional JavaScript file was setup. This JS file creats and index of objects with properties that contain the question, selections, and answer. See below. 
 
-![](/images/QuestionIndex.JPG)
+![](/images/QuestionIndex.jpg)
 
 Criteria Two: "WHEN I answer a question, THEN I am presented with another question"
 
 The image below displays the code to populate the next question within the question index. This is done with a function containing an if else statement that is checking the question index number against the length of the index. Then it creats the question based off of this. This code section is also stoping the timer if it is less than zero as well as setting up the score. 
 
-![](/images/NextQuestion.JPG)
+![](/images/NextQuestion.jpg)
 
 Criteria Three: "WHEN I anser a question incorrectly, THEN time is subtracted from the clock"
 
 To achieve this, an eventListener had to be added to the question choices. Then a function was setup to check the selection clicked aginst the answer property of the question object on the Questions.js file. 
 
-![](/images/IncorrectAnswer.JPG)
+![](/images/IncorrectAnswer.jpg)
 
 Criteria Four: "WHEN all questions are answered or the timer reaches 0, THEN the game is over"
 
 In a prior criteria a stop timer function was setup. The function clears the interval, stopping the timer when the currentQuestion is equal to the index length. Additionally the code also creates and if statement should the timer be less than zero. Hiding the quiz and showing the initials input screen. 
 
-![](/images/ZeroTimer.JPG)
+![](/images/ZeroTimer.jpg)
 
 Final Criteria: "WHEN the game is over, THEN I can save my initials and my score"
 
 The below code creates an area to input initials and save the score. This is done using the key value pairs saved to the local storage. 
 
-![](/images/LocalStore.JPG)
+![](/images/LocalStore.jpg)
