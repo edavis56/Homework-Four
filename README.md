@@ -4,47 +4,46 @@ This assignment had the following acceptance criteria. This README will show how
 
 ![](/assets/images/AcceptanceCriteria.JPG)
 
-Criteria One is met with the following code
+Criteria One: "WHEN I click the start button, THEN a timer starts and I am presented with a question"
 
-![](/assets/images/CriteriaOne.JPG)
+The below images show the code to setup the start button, timer, and questios. 
 
-Below is the HTML code. The HTML sets up the structure of the page with a header containing the developers name, followed by a navigation section containing relative references to additional HTML files containing the following sections: About Me, Portfolio, Resume, and Contact.
+The bleow code sets up the start button with an EventListner containing a function that will hide the intro id and show the quiz id. Additionally, the timer will start as well as the questions. 
 
+![](/assets/images/StartButtonSetup.JPG)
 
-![](/assets/images/CriteriaOneHTML.JPG)
+The next set of code sets up the timer using a function. 
 
-Following the header data is a few recent images of the developer setup as a slideshow. 
+![](/assets/images/TimerSetup.JPG)
 
-Below is the HTML code to setup the slideshow. 
- 
-![](/assets/images/Slideshow.JPG)
+The final piece of code for criteria one is belwo. This is for the questions. Through a function the questions are displayed using a for loop. 
 
-The below code is the CSS to style the slideshow. 
+![](/assets/images/QuestionSetup.JPG)
 
-![](/assets/images/Slidestyle.JPG)
+To facilitate the for loop an additional JavaScript file was setup. This JS file creats and index of objects with properties that contain the question, selections, and answer. See below. 
 
-Criteria Two calls for the navigation to scroll to that section. I took it a bit further and made each section its own HTML page. At the root, this process equates to the same thing. See the code below.
+![](/assets/images/QuestionIndex.JPG)
 
-![](/assets/images/CriteriaTwoPrompt.JPG)
+Criteria Two: "WHEN I answer a question, THEN I am presented with another question"
 
-Below is the HTML code. 
+The image below displays the code to populate the next question within the question index. This is done with a function containing an if else statement that is checking the question index number against the length of the index. Then it creats the question based off of this. This code section is also stoping the timer if it is less than zero as well as setting up the score. 
 
-![](/assets/images/CriteriaTwo.JPG)
+![](/assets/images/NextQuestion.JPG)
 
-Criteria Three is met with the below HTML code. This is remarkably similar to Criteria Two, except it is specifically targeting the portfolio section. Also, the portfolio section had been setup with titled images per the prompt.
+Criteria Three: "WHEN I anser a question incorrectly, THEN time is subtracted from the clock"
 
-![](/assets/images/CriteriaThree.JPG)
+To achieve this, an eventListener had to be added to the question choices. Then a function was setup to check the selection clicked aginst the answer property of the question object on the Questions.js file. 
 
-HTML code for link to protfolio section. 
+![](/assets/images/IncorrectAnswer.JPG)
 
-![](/assets/images/CriteriaThreeHTML.JPG)
+Criteria Four: "WHEN all questions are answered or the timer reaches 0, THEN the game is over"
 
-Criteria Six requires that the webpage be responsive.
+In a prior criteria a stop timer function was setup. The function clears the interval, stopping the timer when the currentQuestion is equal to the index length. Additionally the code also creates and if statement should the timer be less than zero. Hiding the quiz and showing the initials input screen. 
 
-![](/assets/images/CriteriaSix.JPG)
+![](/assets/images/ZeroTimer.JPG)
 
-This was done in the meta-data with the head section of the HTML code. See below. 
+Final Criteria: "WHEN the game is over, THEN I can save my initials and my score"
 
-![](/assets/images/Responsive.JPG)
+The below code creates an area to input initials and save the score. This is done using the key value pairs saved to the local storage. 
 
-(Please note that I set the webpage up in a simplistic style. This was done intentionally.)
+![](/assets/images/LocalStore.JPG)
