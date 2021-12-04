@@ -10,7 +10,7 @@ The below images show the code to setup the start button, timer, and questios.
 
 The bleow code sets up the start button with an EventListner containing a function that will hide the intro id and show the quiz id. Additionally, the timer will start as well as the questions. 
 
-![](/images/StartButtonSetup.JPG)
+![](/images/StartButtonSetup.jpg)
 
 The next set of code sets up the timer using a function. 
 
