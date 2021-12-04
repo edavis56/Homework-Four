@@ -1,21 +1,77 @@
-<html lang="en-us"></html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial=scale=1">
-    <link rel="stylesheet" href="./Assets/CSS/style.css">
-    <script src="Assets/js/script.js "></script>
-    <title>Eric Davis Homework-Four</title>
-</head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap will be used for some classes-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    <title>Homework Four</title> 
 
 <body>
-    <div class="card">
-        <div id="cqc">
-          <h1>Coding Quiz Challenge</h1>
-          <p class="pcontainer">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+<!--This class is coming from Bootstrap. It is setting up a container with a top margin of 5 -->
+    <header class="container mt-5"></header>
+        <div class="col-md-4 h2" id="highScore">View Highscores</div><!--This too is coming from Bootstrap setting up a column using the grid system-->
+        <div class="col-md-2 ml-auto h2"> Time Remaining: <span id="timer">0</span></div><!--This again uses Bootstrap to setup another column for the timer to be placed in-->
+    </header>
+<!--The above creates the skeleton to the browser page. Specifically this is for the header section. Setting up a column to the right and left-->
+
+    <section class="container mt-3"><!--THis container is the Jumbotron from Bootstrap. This is being used to display each card. Meaning, card 1 will be the intro, then question 1, question 2, and so forth-->
+        <div class="jumbotron jumbotron-fluid text-center"</div><!--This div is using the jumbotron fluid from Bootstrap. This will ensure the text occupies the entire horizontal space as well as center any text.-->
+           
+            <div class="container" id="intro"><!--This is creating a container for the header; which states, "Coding Quiz"-->
+                <h1 class="h1 mb-4">Coding Quiz</h1>
+                <p class="lead mb-4">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+                <button type="button" class="btn btn-primary btn-lg" id="startQuiz">Start Quiz</button><!--This creates the start button after a brief instruction paragraph-->
+            </div>
+
+            <div class="container" id="quiz"><!--This is setting up the container for the quiz questions and answers to be displayed in-->
+                <h1 class="h1 mb-4" id="questions"></h1><!--This creates a header where the question will sit. Which ahs be established as a variable in the JS-->
+                <!--The below is setting up four buttons using Bootstrap for the container they are in as well as the button itself. ids have been assigned to each button in an array fashion.-->
+                <div class="container" id="answer">
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-3 text-left" id="0"></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-3 text-left" id="1"></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-3 text-left" id="2"></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-3 text-left" id="3"></button>
+                    </div>
+                </div>   
+            </div>
         </div>
-        <a  href=Card2.html> <input class="button" type=button value=Start&nbsp;Quiz>
-        </a>
-      </div> 
+    </section>
+
+
+    <div class="container" id="scoreInput">
+        <h1 class="h1 mb-4">Done!</h1>
+        <p class="lead mb-4">Final Score:<span id="score"></span></p>
+        <p class="lead mb-4">Input Initials:<input type="text " id="initials"></p>
+        <button type="button" class="btn btn-primary btn-lg" id="submitInitials">Submit</button>
+    </div>
+
+    <div class="container" id="highScores">
+        <h1 class="h1 mb-4 font-weigth-bold">Highscores</h1>
+        <div class="container h4 mb-4" id="scores">
+        </div>
+        <button type="button" class="btn btn-primary btn-lg" id="goBack">Go Back</button>
+        <button type="button" class="btn btn-primary btn-lg" id="clearScores">Clear Scores</button>
+    </div>
+
+
+    <!--The below are links to the JS files used. Note; I am also using jquery for this activity. Additionally, these references have been placed at the end of the HTML to allow the page to load faster. -->
+    <script src="Questions.js"></script>
+    <script src="Quiz.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
 </body>
-  
+
+
+<!--Setting up IDs allows me to make adjustments to the HTML element with JavaScript-->

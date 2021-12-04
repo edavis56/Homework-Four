@@ -1,0 +1,15 @@
+/*Because this is a quiz and not much styling is needed the following in minimal*/
+
+#intro, #quiz, #score, #highScores {
+    width: 70%
+  
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+/*This hides the ids - highScores, score, and quiz*/
+#quiz, #scoreInput, #highScores{
+    display: none;
+}
