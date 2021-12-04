@@ -2,9 +2,7 @@
 
 This assignment had the following acceptance criteria. This README will show how each of these criteria was met.
 
-##Acceptance Criteria
-
-![](/assets/images/Acceptance%20Criteria.JPG)
+![](/assets/images/AcceptanceCriteria.JPG)
 
 Criteria One is met with the following code
 
